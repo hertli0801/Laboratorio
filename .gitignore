@@ -1,0 +1,36 @@
+# Archivos y carpetas de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales de compilación
+bin/
+obj/
+
+# Archivos de paquetes
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de configuración local
+*.dbmdl
+*.log
+*.tlog
+
+# Archivos de cache de diseño y depuración
+*.cache
+*.pdb
+*.vsp
+*.vspscc
+*.vssscc
+
+# Archivos de publicación y deploy
+*.Publish.xml
+*.wixproj
+*.wixproj.user
+
+# Otros
+_ReSharper*/
