@@ -1,8 +1,8 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports MySqlConnector
+
 
 Public Class FormClientes
-    Private conexion As New MySqlConnection("server=localhost;user id=root;password=;database=laboratorio_analisis;")
-
+    Private conexion As New MySqlConnection("server=localhost;port=3309;user id=root;password=1234;database=laboratorio_analisis;")
     Public Sub CargarClientes()
         Try
             conexion.Open()
@@ -59,5 +59,11 @@ Public Class FormClientes
         Me.Hide()
     End Sub
 
+    Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
 
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
+    End Sub
 End Class

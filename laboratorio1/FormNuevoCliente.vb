@@ -1,7 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports MySqlConnector
 
 Public Class FormNuevoCliente
-    Private conexion As New MySqlConnection("server=localhost;user id=root;password=;database=laboratorio_analisis;")
+    Private conexion As New MySqlConnection("server=localhost;port=3309;user id=root;password=1234;database=laboratorio_analisis;")
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         ' Obtiene los valores de los campos
@@ -80,5 +80,9 @@ Public Class FormNuevoCliente
             frm.Show()
             Me.Close()
         End If
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
     End Sub
 End Class

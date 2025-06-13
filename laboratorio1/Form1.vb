@@ -1,9 +1,10 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
+Imports MySqlConnector
 
 Public Class Form1
 
     ' Cadena de conexión (cambia la contraseña)
-    Private conexion As New MySqlConnection("server=localhost;user id=root;password=;database=laboratorio_analisis;")
+    Private conexion As New MySqlConnection("server=localhost;port=3309;user id=root;password=1234;database=laboratorio_analisis;")
 
     Private Sub btnEntrar_Click(sender As Object, e As EventArgs) Handles btnEntrar.Click
         Dim usuario As String = txtUsuario.Text.Trim()
@@ -37,7 +38,9 @@ Public Class Form1
                     Case "gerente"
                         ' formulario para gerente
                     Case "administrador"
-                        ' formulario para administrador
+                        Dim frmAdmin As New FormAdministrador()
+                        frmAdmin.Show()
+                        Me.Hide()
                     Case Else
                         MessageBox.Show("Usuario no encontrado")
                 End Select
@@ -54,4 +57,7 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub txtUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtUsuario.TextChanged
+
+    End Sub
 End Class
